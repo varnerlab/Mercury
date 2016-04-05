@@ -10,6 +10,7 @@
 		ADDCC18A1CA816D000B178C7 /* Mercury.h in Headers */ = {isa = PBXBuildFile; fileRef = ADDCC1891CA816D000B178C7 /* Mercury.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADDCC1911CA816D100B178C7 /* Mercury.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDCC1861CA816D000B178C7 /* Mercury.framework */; };
 		ADDCC1961CA816D100B178C7 /* MercuryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDCC1951CA816D100B178C7 /* MercuryTests.swift */; };
+		ADDCC1A11CA9547100B178C7 /* Mercury.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDCC1A01CA9547100B178C7 /* Mercury.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		ADDCC1901CA816D100B178C7 /* MercuryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MercuryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADDCC1951CA816D100B178C7 /* MercuryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercuryTests.swift; sourceTree = "<group>"; };
 		ADDCC1971CA816D100B178C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADDCC1A01CA9547100B178C7 /* Mercury.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mercury.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				ADDCC1891CA816D000B178C7 /* Mercury.h */,
 				ADDCC18B1CA816D000B178C7 /* Info.plist */,
+				ADDCC1A01CA9547100B178C7 /* Mercury.swift */,
 			);
 			path = Mercury;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADDCC1A11CA9547100B178C7 /* Mercury.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +314,8 @@
 		ADDCC19B1CA816D100B178C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -317,15 +323,19 @@
 				INFOPLIST_FILE = Mercury/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = org.varnerlab.Mercury;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		ADDCC19C1CA816D100B178C7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -378,6 +388,7 @@
 				ADDCC19C1CA816D100B178C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ADDCC19D1CA816D100B178C7 /* Build configuration list for PBXNativeTarget "MercuryTests" */ = {
 			isa = XCConfigurationList;
@@ -386,6 +397,7 @@
 				ADDCC19F1CA816D100B178C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
