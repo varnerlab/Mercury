@@ -34,6 +34,8 @@ public class Mercury {
         // ...
     }
 
+    
+    
     public func subscribe(subscriber: MercurySubscriber, messageKey: MessageKey) -> Void {
         
         if (subscriber_dictionary[messageKey] == nil){
