@@ -26,6 +26,12 @@ public class Mercury {
     
     // Define the message keys -
     public static let EchoKey:MessageKey = "ECHO_MESSAGE_KEY"
+
+    public static let ErrorKey: MessageKey = "ERROR_MESSAGE_KEY"
+    
+    public static let StartKey: MessageKey = "START_MESSAGE_KEY"
+    
+    public static let StopKey: MessageKey = "STOP_MESSAGE_KEY"
     
     // private constructor -
     private init() {

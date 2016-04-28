@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ADDCC1851CA816D000B178C7"
-               BuildableName = "Mercury.framework"
-               BlueprintName = "Mercury"
+               BlueprintIdentifier = "FFB9F6051CB831930078B23F"
+               BuildableName = "Build framework"
+               BlueprintName = "Build framework"
                ReferencedContainer = "container:Mercury.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ADDCC18F1CA816D100B178C7"
-               BuildableName = "MercuryTests.xctest"
-               BlueprintName = "MercuryTests"
-               ReferencedContainer = "container:Mercury.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ADDCC1851CA816D000B178C7"
-            BuildableName = "Mercury.framework"
-            BlueprintName = "Mercury"
-            ReferencedContainer = "container:Mercury.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ADDCC1851CA816D000B178C7"
-            BuildableName = "Mercury.framework"
-            BlueprintName = "Mercury"
+            BlueprintIdentifier = "FFB9F6051CB831930078B23F"
+            BuildableName = "Build framework"
+            BlueprintName = "Build framework"
             ReferencedContainer = "container:Mercury.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ADDCC1851CA816D000B178C7"
-            BuildableName = "Mercury.framework"
-            BlueprintName = "Mercury"
+            BlueprintIdentifier = "FFB9F6051CB831930078B23F"
+            BuildableName = "Build framework"
+            BlueprintName = "Build framework"
             ReferencedContainer = "container:Mercury.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

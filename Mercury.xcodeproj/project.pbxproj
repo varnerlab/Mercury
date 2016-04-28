@@ -6,11 +6,29 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		FFB9F6051CB831930078B23F /* Build framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = FFB9F6081CB831930078B23F /* Build configuration list for PBXAggregateTarget "Build framework" */;
+			buildPhases = (
+				FFB9F6091CB831980078B23F /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Build framework";
+			productName = "Build framework";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		ADDCC18A1CA816D000B178C7 /* Mercury.h in Headers */ = {isa = PBXBuildFile; fileRef = ADDCC1891CA816D000B178C7 /* Mercury.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADDCC1911CA816D100B178C7 /* Mercury.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDCC1861CA816D000B178C7 /* Mercury.framework */; };
 		ADDCC1961CA816D100B178C7 /* MercuryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDCC1951CA816D100B178C7 /* MercuryTests.swift */; };
 		ADDCC1A11CA9547100B178C7 /* Mercury.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDCC1A01CA9547100B178C7 /* Mercury.swift */; };
+		FFF5BF081CC6F370000E35B5 /* EchoMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF5BF071CC6F370000E35B5 /* EchoMessage.swift */; };
+		FFF5BF1E1CC801F6000E35B5 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF5BF1D1CC801F6000E35B5 /* ErrorMessage.swift */; };
+		FFF5BF241CC809D4000E35B5 /* StartMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF5BF231CC809D4000E35B5 /* StartMessage.swift */; };
+		FFF5BF261CC809E2000E35B5 /* StopMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF5BF251CC809E2000E35B5 /* StopMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +49,10 @@
 		ADDCC1951CA816D100B178C7 /* MercuryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercuryTests.swift; sourceTree = "<group>"; };
 		ADDCC1971CA816D100B178C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADDCC1A01CA9547100B178C7 /* Mercury.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mercury.swift; sourceTree = "<group>"; };
+		FFF5BF071CC6F370000E35B5 /* EchoMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EchoMessage.swift; sourceTree = "<group>"; };
+		FFF5BF1D1CC801F6000E35B5 /* ErrorMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		FFF5BF231CC809D4000E35B5 /* StartMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartMessage.swift; sourceTree = "<group>"; };
+		FFF5BF251CC809E2000E35B5 /* StopMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +98,10 @@
 				ADDCC1891CA816D000B178C7 /* Mercury.h */,
 				ADDCC18B1CA816D000B178C7 /* Info.plist */,
 				ADDCC1A01CA9547100B178C7 /* Mercury.swift */,
+				FFF5BF231CC809D4000E35B5 /* StartMessage.swift */,
+				FFF5BF251CC809E2000E35B5 /* StopMessage.swift */,
+				FFF5BF071CC6F370000E35B5 /* EchoMessage.swift */,
+				FFF5BF1D1CC801F6000E35B5 /* ErrorMessage.swift */,
 			);
 			path = Mercury;
 			sourceTree = "<group>";
@@ -155,6 +181,10 @@
 					ADDCC18F1CA816D100B178C7 = {
 						CreatedOnToolsVersion = 7.3;
 					};
+					FFB9F6051CB831930078B23F = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = F5DC67J8SL;
+					};
 				};
 			};
 			buildConfigurationList = ADDCC1801CA816D000B178C7 /* Build configuration list for PBXProject "Mercury" */;
@@ -171,6 +201,7 @@
 			targets = (
 				ADDCC1851CA816D000B178C7 /* Mercury */,
 				ADDCC18F1CA816D100B178C7 /* MercuryTests */,
+				FFB9F6051CB831930078B23F /* Build framework */,
 			);
 		};
 /* End PBXProject section */
@@ -192,11 +223,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FFB9F6091CB831980078B23F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Merge Script\n\n# 1\n# Set bash script to exit immediately if any commands fail.\nset -e\n\n# 2\n# Setup some constants for use later on.\nFRAMEWORK_NAME=\"Mercury\"\n\n# 3\n# If remnants from a previous build exist, delete them.\nif [ -d \"${SRCROOT}/build\" ]; then\nrm -rf \"${SRCROOT}/build\"\nfi\n\n# 4\n# Build the framework for device and for simulator (using\n# all needed architectures).\nxcodebuild -target \"${FRAMEWORK_NAME}\" -configuration Release -arch arm64 -arch armv7 -arch armv7s only_active_arch=no defines_module=yes -sdk \"iphoneos\"\nxcodebuild -target \"${FRAMEWORK_NAME}\" -configuration Release -arch x86_64 -arch i386 only_active_arch=no defines_module=yes -sdk \"iphonesimulator\"\n\n# 5\n# Remove .framework file if exists on Desktop from previous run.\nif [ -d \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework\" ]; then\nrm -rf \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework\"\nfi\n\n# 6\n# Copy the device version of framework to Desktop.\ncp -r \"${SRCROOT}/build/Release-iphoneos/${FRAMEWORK_NAME}.framework\" \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework\"\n\n# 7\n# Replace the framework executable within the framework with\n# a new version created by merging the device and simulator\n# frameworks' executables with lipo.\nlipo -create -output \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${SRCROOT}/build/Release-iphoneos/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${SRCROOT}/build/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\"\n\n# 8\n# Copy the Swift module mappings for the simulator into the\n# framework.  The device mappings already exist from step 6.\ncp -r \"${SRCROOT}/build/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule/\" \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule\"\n\n# 9\n# Delete the most recent build.\nif [ -d \"${SRCROOT}/build\" ]; then\nrm -rf \"${SRCROOT}/build\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ADDCC1811CA816D000B178C7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFF5BF241CC809D4000E35B5 /* StartMessage.swift in Sources */,
+				FFF5BF081CC6F370000E35B5 /* EchoMessage.swift in Sources */,
+				FFF5BF261CC809E2000E35B5 /* StopMessage.swift in Sources */,
+				FFF5BF1E1CC801F6000E35B5 /* ErrorMessage.swift in Sources */,
 				ADDCC1A11CA9547100B178C7 /* Mercury.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,6 +420,20 @@
 			};
 			name = Release;
 		};
+		FFB9F6061CB831930078B23F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FFB9F6071CB831930078B23F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -395,6 +460,15 @@
 			buildConfigurations = (
 				ADDCC19E1CA816D100B178C7 /* Debug */,
 				ADDCC19F1CA816D100B178C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFB9F6081CB831930078B23F /* Build configuration list for PBXAggregateTarget "Build framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFB9F6061CB831930078B23F /* Debug */,
+				FFB9F6071CB831930078B23F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
