@@ -10,7 +10,6 @@ import Foundation
 
 public class ErrorMessage:MercuryMessage {
     
-    // Class/instance variables -
     public var message_payload:String?
     
     public func getMercuryMessageKey() -> MessageKey {
@@ -19,12 +18,12 @@ public class ErrorMessage:MercuryMessage {
     
     public init() { }
    
-    //Add error message, token, line #, column #
+    public var line_number: String?
+    public var column_numer: String?
+    public var error_sentence: String?
     
-    public func getToken() -> String {
-        
-        return ("Error found: line: \(#line), column: \(#column)")
-    }
-        
+    public var token: String?
+    
+    public var UUID: String?
     
 }

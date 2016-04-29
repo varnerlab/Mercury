@@ -33,6 +33,11 @@ public class Mercury {
     
     public static let StopKey: MessageKey = "STOP_MESSAGE_KEY"
     
+    public static let CompletedKey: MessageKey = "COMPLETED_MESSAGE_KEY"
+
+    public static let ProgressKey: MessageKey = "PROGRESS_MESSAGE_KEY"
+
+    
     // private constructor -
     private init() {
         

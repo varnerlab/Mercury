@@ -29,6 +29,8 @@
 		FFF5BF1E1CC801F6000E35B5 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF5BF1D1CC801F6000E35B5 /* ErrorMessage.swift */; };
 		FFF5BF241CC809D4000E35B5 /* StartMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF5BF231CC809D4000E35B5 /* StartMessage.swift */; };
 		FFF5BF261CC809E2000E35B5 /* StopMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF5BF251CC809E2000E35B5 /* StopMessage.swift */; };
+		FFF5BF301CD3C698000E35B5 /* CompletedMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF5BF2F1CD3C698000E35B5 /* CompletedMessage.swift */; };
+		FFF5BF321CD3C6A6000E35B5 /* ProgressMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF5BF311CD3C6A6000E35B5 /* ProgressMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		FFF5BF1D1CC801F6000E35B5 /* ErrorMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		FFF5BF231CC809D4000E35B5 /* StartMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartMessage.swift; sourceTree = "<group>"; };
 		FFF5BF251CC809E2000E35B5 /* StopMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopMessage.swift; sourceTree = "<group>"; };
+		FFF5BF2F1CD3C698000E35B5 /* CompletedMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedMessage.swift; sourceTree = "<group>"; };
+		FFF5BF311CD3C6A6000E35B5 /* ProgressMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				FFF5BF251CC809E2000E35B5 /* StopMessage.swift */,
 				FFF5BF071CC6F370000E35B5 /* EchoMessage.swift */,
 				FFF5BF1D1CC801F6000E35B5 /* ErrorMessage.swift */,
+				FFF5BF2F1CD3C698000E35B5 /* CompletedMessage.swift */,
+				FFF5BF311CD3C6A6000E35B5 /* ProgressMessage.swift */,
 			);
 			path = Mercury;
 			sourceTree = "<group>";
@@ -245,8 +251,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFF5BF241CC809D4000E35B5 /* StartMessage.swift in Sources */,
+				FFF5BF301CD3C698000E35B5 /* CompletedMessage.swift in Sources */,
 				FFF5BF081CC6F370000E35B5 /* EchoMessage.swift in Sources */,
 				FFF5BF261CC809E2000E35B5 /* StopMessage.swift in Sources */,
+				FFF5BF321CD3C6A6000E35B5 /* ProgressMessage.swift in Sources */,
 				FFF5BF1E1CC801F6000E35B5 /* ErrorMessage.swift in Sources */,
 				ADDCC1A11CA9547100B178C7 /* Mercury.swift in Sources */,
 			);

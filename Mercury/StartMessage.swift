@@ -10,8 +10,7 @@ import Foundation
 
 public class StartMessage:MercuryMessage {
     
-    // Class/instance variables -
-    public var message_payload:String?
+    public var message_payload:[String]?
     
     public func getMercuryMessageKey() -> MessageKey {
         return Mercury.StartKey
@@ -19,9 +18,6 @@ public class StartMessage:MercuryMessage {
     
     public init() { }
     
-    //UUID
-    let uuid = NSUUID().UUIDString
-    print(uuid)
-    
+    public var let UUID = NSUUID().UUIDString
     
 }
